@@ -1,0 +1,199 @@
+{
+	"id": "9eeba994-96fe-3a8d-bd52-904491f6be63",
+	"name": "Simple Blog",
+	"description": "",
+	"order": [
+		"76e093da-e7b0-40ae-6566-ef098f53476a",
+		"c950d135-4d09-b4ee-e95f-b025628f7049",
+		"b5fee74c-e29f-a9ef-0c0b-ebf48a491fb2",
+		"5f8996e7-ef05-13fb-bfae-1a4c664503da",
+		"67e265ee-c149-3b20-4760-e61d95be798e"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1534325729641,
+	"owner": "4796115",
+	"public": false,
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "5f8996e7-ef05-13fb-bfae-1a4c664503da",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/post/update/{postUuid}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [
+				{
+					"key": "postTitle",
+					"value": "修改標題",
+					"description": ""
+				},
+				{
+					"key": "postCategory",
+					"value": "修改類別",
+					"description": ""
+				},
+				{
+					"key": "postContent",
+					"value": "修改內容",
+					"description": ""
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1534326286203,
+			"name": "http://localhost:8000/api/post/update/31d0c3fa-a069-11e8-9ee8-8c85902aeb0a",
+			"description": "",
+			"collectionId": "9eeba994-96fe-3a8d-bd52-904491f6be63",
+			"responses": []
+		},
+		{
+			"id": "67e265ee-c149-3b20-4760-e61d95be798e",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/post/add",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "postTitle",
+					"value": "標題欄位",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "postAuthor",
+					"value": "作者欄位(uuid)",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "postCategory",
+					"value": "類別欄位(uuid)",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "postContent",
+					"value": "內容欄位",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1534326327778,
+			"name": "http://localhost:8000/api/post/add",
+			"description": "",
+			"collectionId": "9eeba994-96fe-3a8d-bd52-904491f6be63",
+			"responses": []
+		},
+		{
+			"id": "76e093da-e7b0-40ae-6566-ef098f53476a",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/post/10/get",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "9eeba994-96fe-3a8d-bd52-904491f6be63",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/post/10/get",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1534325753591,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"collection_id": "9eeba994-96fe-3a8d-bd52-904491f6be63"
+		},
+		{
+			"id": "b5fee74c-e29f-a9ef-0c0b-ebf48a491fb2",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/post/delete",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "9eeba994-96fe-3a8d-bd52-904491f6be63",
+			"data": [
+				{
+					"key": "postUuid",
+					"value": "31d0c3fa-a069-11e8-9ee8-8c85902aeb0a",
+					"description": ""
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8000/api/post/delete",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1534325739639,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"collection_id": "9eeba994-96fe-3a8d-bd52-904491f6be63"
+		},
+		{
+			"id": "c950d135-4d09-b4ee-e95f-b025628f7049",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/post/get/{postUuid}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1534326238284,
+			"name": "http://localhost:8000/api/post/get/30431cfe-a069-11e8-974f-8c85902aeb0a",
+			"description": "",
+			"collectionId": "9eeba994-96fe-3a8d-bd52-904491f6be63",
+			"responses": []
+		}
+	]
+}
