@@ -12,6 +12,8 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        '/post/add',
+        '/post/update/{uuid}',
+        '/post/delete'
     ];
 }
