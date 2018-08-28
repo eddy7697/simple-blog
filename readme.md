@@ -19,7 +19,7 @@
 
 #### 安裝方式
 \
-clone repo
+Clone repo
 ```
 # git clone https://github.com/eddy7697/simple-blog.git
 ```
@@ -42,7 +42,7 @@ vendor and moudule
 # cp .env.example .env
 ```
 \
-generate key
+Generate key
 ```
 # php artisan key:generate
 ```
@@ -59,6 +59,7 @@ Start and do your homework
 <br/>
 
 ---
+<br/>
 ## 文章
 <br/>
 #### 取得所有文章
@@ -105,6 +106,101 @@ Start and do your homework
   <tr>
     <td>URL</td>
     <td>/api/post/add</td>
+  </tr>
+  <tr>
+    <td>Methos</td>
+    <td>POST</td>
+  </tr>
+</table>
+
+參數物件
+
+```
+{
+  postTitle: '文章標題',
+  postAuthor: '文章作者',
+  postCategory: '文章類別',
+  postContent: '文章內容'
+}
+```
+---
+#### 修改文章
+
+<table>
+  <tr>
+    <td>URL</td>
+    <td>/api/post/update/{postUuid}</td>
+  </tr>
+  <tr>
+    <td>Methos</td>
+    <td>PUT</td>
+  </tr>
+</table>
+
+參數
+ - `postUuid`
+   - 文章的uuid
+
+參數物件
+```
+{
+  postTitle: '文章標題',
+  postCategory: '文章類別',
+  postContent: '文章內容'
+}
+```
+---
+#### 刪除文章
+
+<table>
+  <tr>
+    <td>URL</td>
+    <td>/api/post/delete</td>
+  </tr>
+  <tr>
+    <td>Methos</td>
+    <td>DELETE</td>
+  </tr>
+</table>
+
+參數物件
+```
+{
+  postUuid: '文章的uuid',
+}
+```
+---
+<br/>
+## 類別
+<br/>
+#### 取得所有類別
+
+<table>
+  <tr>
+    <td>URL</td>
+    <td>/category/get</td>
+  </tr>
+  <tr>
+    <td>Methos</td>
+    <td>GET</td>
+  </tr>
+</table>
+
+說明
+
+ - 取得全部的類別
+
+參數
+
+ - 無
+
+---
+#### 新增類別
+
+<table>
+  <tr>
+    <td>URL</td>
+    <td>/api/category/add</td>
   </tr>
   <tr>
     <td>Methos</td>
