@@ -14,34 +14,33 @@
 
 #### 安裝方式
 
-
+> clone repo
 ```
 # git clone https://github.com/eddy7697/simple-blog.git
 ```
-> clone repo
 
-
+> vendor and moudule
 ```
 # composer install
 # npm install
 ```
-> vendor and moudule
 
+> new env
 ```
 # cp .env.example .env
 ```
-> new env
 
+> generate key
 ```
 # php artisan key:generate
 ```
-> generate key
 
+> Start and do your homework
 ```
 # php artisan serve
 # npm run watch
 ```
-> Start and do your homework
+
 ---
 #### 取得所有文章
 
