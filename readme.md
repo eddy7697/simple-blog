@@ -25,7 +25,15 @@
 # npm install
 ```
 
-> new env
+> 建立 env
+>
+> **＊請注意，在確認專案底下存在.env檔案後，務必確認是否連上資料庫**
+>
+> **若沒有資料庫存在，請自行建立，並對應設定黨**
+>
+> [phpMyAdmin 新增資料庫](https://www.siteground.com/tutorials/phpmyadmin/create-populate-tables/)
+>
+> [MySQL Workbench. 新增資料庫](https://stackoverflow.com/questions/5515745/create-a-new-database-with-mysql-workbench)
 ```
 # cp .env.example .env
 ```
