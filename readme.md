@@ -2,27 +2,17 @@
 
 此專案為集合了以下功能的簡易練習用專案，藉以熟悉API操作
 
- - Get
-   - 文章
-     - [GET `/api/post/{row}/get`](#取得所有文章)
-     - [GET `/api/post/get/{postGuid}`](#取得單一篇文章)
-   - 類別
-     - [GET `/api/category/get`](#取得所有類別)
- - Create
-   - 文章
-     - [POST `/api/post/add`](#新增文章)
-   - 類別
-     - [POST `/api/category/add`](#新增類別)
- - Update
-   - 文章
-     - [PUT `/api/post/update/{postUuid}`](#修改文章)
-   - 類別
-     - [PUT `/api/category/update/{categoryUuid}`](#修改類別)
- - Delete
-   - 文章
-     - [DELETE `/api/post/delete`](#刪除文章)
-   - 類別
-     - [DELETE `/api/category/delete`](#刪除類別)
+- 文章
+  - [GET `/api/post/{row}/get`](#取得所有文章)
+  - [GET `/api/post/get/{postGuid}`](#取得單一篇文章)
+  - [POST `/api/post/add`](#新增文章)
+  - [PUT `/api/post/update/{postUuid}`](#修改文章)
+  - [DELETE `/api/post/delete`](#刪除文章)
+- 類別
+  - [GET `/api/category/get`](#取得所有類別)
+  - [POST `/api/category/add`](#新增類別)
+  - [PUT `/api/category/update/{categoryUuid}`](#修改類別)
+  - [DELETE `/api/category/delete`](#刪除類別)
 
 <br/>
 
