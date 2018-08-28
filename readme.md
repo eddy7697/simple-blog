@@ -100,7 +100,7 @@
 {
   postTitle: '文章標題',
   postAuthor: '文章作者',
-  postCategory: '文章類別',
+  postCategory: '文章類別',
   postContent: '文章內容'
 }
 ```
@@ -126,7 +126,7 @@
 ```
 {
   postTitle: '文章標題',
-  postCategory: '文章類別',
+  postCategory: '文章類別',
   postContent: '文章內容'
 }
 ```
