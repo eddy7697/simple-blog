@@ -1,7 +1,6 @@
 ## 簡易部落格 － For Hunter to practice API
 
 此專案為集合了以下功能的簡易練習用專案，藉以熟悉API操作
-[安裝方式](####安裝方式)
 
  - Get
    - [GET `/api/post/{row}/get`](####取得所有文章)
