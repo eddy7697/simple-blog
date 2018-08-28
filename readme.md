@@ -3,14 +3,14 @@
 此專案為集合了以下功能的簡易練習用專案，藉以熟悉API操作
 
  - Get
-   - [GET `/api/post/{row}/get`](####取得所有文章)
-   - [GET `/api/post/get/{postGuid}`](####取得單一篇文章)
+   - [GET `/api/post/{row}/get`](#取得所有文章)
+   - [GET `/api/post/get/{postGuid}`](#取得單一篇文章)
  - Create
-   - [POST `/api/post/add`](####新增文章)
+   - [POST `/api/post/add`](#新增文章)
  - Update
-   - [PUT `/api/post/update/{postUuid}`](####修改文章)
+   - [PUT `/api/post/update/{postUuid}`](#修改文章)
  - Delete
-   - [DELETE `/api/post/delete`](####刪除文章)
+   - [DELETE `/api/post/delete`](#刪除文章)
 
 #### 安裝方式
 
