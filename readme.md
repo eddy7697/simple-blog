@@ -3,14 +3,26 @@
 此專案為集合了以下功能的簡易練習用專案，藉以熟悉API操作
 
  - Get
-   - [GET `/api/post/{row}/get`](#取得所有文章)
-   - [GET `/api/post/get/{postGuid}`](#取得單一篇文章)
+   - 文章
+     - [GET `/api/post/{row}/get`](#取得所有文章)
+     - [GET `/api/post/get/{postGuid}`](#取得單一篇文章)
+   - 類別
+     - [GET `/api/category/get`](#取得所有類別)
  - Create
-   - [POST `/api/post/add`](#新增文章)
+   - 文章
+     - [POST `/api/post/add`](#新增文章)
+   - 類別
+     - [POST `/api/category/add`](#新增類別)
  - Update
+   - 文章
    - [PUT `/api/post/update/{postUuid}`](#修改文章)
+   - 類別
+   - [PUT `/api/category/update/{categoryUuid}`](#修改類別)
  - Delete
-   - [DELETE `/api/post/delete`](#刪除文章)
+   - 文章
+     - [DELETE `/api/post/delete`](#刪除文章)
+   - 類別
+     - [DELETE `/api/category/delete`](#修改類別)
 
 <br/>
 
@@ -178,7 +190,7 @@ Start and do your homework
 <table>
   <tr>
     <td>URL</td>
-    <td>/category/get</td>
+    <td>/api/category/get</td>
   </tr>
   <tr>
     <td>Methos</td>
@@ -212,19 +224,18 @@ Start and do your homework
 
 ```
 {
-  postTitle: '文章標題',
-  postAuthor: '文章作者',
-  postCategory: '文章類別',
-  postContent: '文章內容'
+  categoryTitle: '類別標題',
+  categoryDescription: '類別簡述',
+  parentUuid: '父類別uuid'
 }
 ```
 ---
-#### 修改文章
+#### 修改類別
 
 <table>
   <tr>
     <td>URL</td>
-    <td>/api/post/update/{postUuid}</td>
+    <td>/api/category/update/{categoryUuid}</td>
   </tr>
   <tr>
     <td>Methos</td>
@@ -233,24 +244,24 @@ Start and do your homework
 </table>
 
 參數
- - `postUuid`
-   - 文章的uuid
+ - `categoryUuid`
+   - 類別的uuid
 
 參數物件
 ```
 {
-  postTitle: '文章標題',
-  postCategory: '文章類別',
-  postContent: '文章內容'
+  categoryTitle: '類別標題',
+  categoryDescription: '類別簡述',
+  parentUuid: '父類別uuid'
 }
 ```
 ---
-#### 刪除文章
+#### 刪除類別
 
 <table>
   <tr>
     <td>URL</td>
-    <td>/api/post/delete</td>
+    <td>/api/category/delete</td>
   </tr>
   <tr>
     <td>Methos</td>
@@ -261,6 +272,6 @@ Start and do your homework
 參數物件
 ```
 {
-  postUuid: '文章的uuid',
+  categoryUuid: '類別的uuid',
 }
 ```
