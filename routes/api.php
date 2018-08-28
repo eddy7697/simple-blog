@@ -18,8 +18,19 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
+/**
+ * Post API
+ */
 Route::get('/post/get/{uuid}', 'Backend\PostController@getPost');
 Route::get('/post/{row}/get', 'Backend\PostController@getAllPost');
 Route::post('/post/add', 'Backend\PostController@addPost');
 Route::put('/post/update/{uuid}', 'Backend\PostController@updatePost');
 Route::delete('/post/delete', 'Backend\PostController@deletePost');
+
+/**
+ * Category API
+ */
+Route::get('/category/get', 'Backend\CategoryController@getAllCategories');
+Route::post('/category/add', 'Backend\CategoryController@createCategory');
+Route::put('/category/update/{uuid}', 'Backend\CategoryController@updateCategory');
+Route::delete('/category/delete', 'Backend\CategoryController@deleteCategory');

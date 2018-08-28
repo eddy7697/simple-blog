@@ -64,21 +64,25 @@ class PostController extends Controller
 
         $validator = Validator::make($body, [
             'postTitle' => 'required|unique:posts|max:255',
-            'postAuthor' => 'required',
-            'postContent' => 'required'
         ]);
 
-        $body['postUuid'] = Uuid::uuid1();
+        if ($validator->fails()) {
+            $data = $validator->errors();
+            $status = 426;
+            $message = 'Requirement parameter invalidated.';
+        } else {
+            $body['postUuid'] = Uuid::uuid1();
 
-        try {
-            $data = Post::create($body);
-            $status = 200;
-            $message = 'Create post success';
-        } catch (\Exception $e) {
-            $data = null;
-            $status = 500;
-            $message = $e->getMessage();
-        }
+            try {
+                $data = Post::create($body);
+                $status = 200;
+                $message = 'Create post success';
+            } catch (\Exception $e) {
+                $data = null;
+                $status = 500;
+                $message = $e->getMessage();
+            }
+        }        
 
         return response()->json([ 
             'status' => $status, 
@@ -94,19 +98,29 @@ class PostController extends Controller
     {
         $body = $request->all();
 
-        try {
-            $data = Post::where('postUuid', $uuid)
-                        ->update([
-                            'postTitle' => $body['postTitle'],
-                            'postCategory' => $body['postCategory'],
-                            'postContent' => $body['postContent']
-                        ]);
-            $status = 200;
-            $message = 'Update post success';
-        } catch (\Exception $e) {
-            $data = null;
-            $status = 500;
-            $message = $e->getMessage();
+        $validator = Validator::make($body, [
+            'postTitle' => 'required|unique:posts|max:255',
+        ]);
+
+        if ($validator->fails()) {
+            $data = $validator->errors();
+            $status = 426;
+            $message = 'Requirement parameter invalidated.';
+        } else {
+            try {
+                $data = Post::where('postUuid', $uuid)
+                            ->update([
+                                'postTitle' => $body['postTitle'],
+                                'postCategory' => $body['postCategory'],
+                                'postContent' => $body['postContent']
+                            ]);
+                $status = 200;
+                $message = 'Update post success';
+            } catch (\Exception $e) {
+                $data = null;
+                $status = 500;
+                $message = $e->getMessage();
+            }
         }
 
         return response()->json([ 
@@ -123,15 +137,25 @@ class PostController extends Controller
     {
         $body = $request->all();
 
-        try {
-            $data = Post::where('postUuid', $body['postUuid'])
-                        ->delete();
-            $status = 200;
-            $message = 'Delete post success';
-        } catch (\Exception $e) {
-            $data = null;
-            $status = 500;
-            $message = $e->getMessage();
+        $validator = Validator::make($body, [
+            'postUuid' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            $data = $validator->errors();
+            $status = 426;
+            $message = 'Requirement parameter invalidated.';
+        } else {
+            try {
+                $data = Post::where('postUuid', $body['postUuid'])
+                            ->delete();
+                $status = 200;
+                $message = 'Delete post success';
+            } catch (\Exception $e) {
+                $data = null;
+                $status = 500;
+                $message = $e->getMessage();
+            }
         }
 
         return response()->json([ 

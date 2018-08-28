@@ -12,44 +12,55 @@
  - Delete
    - [DELETE `/api/post/delete`](#刪除文章)
 
-#### 安裝方式
+<br/>
 
-> clone repo
+---
+<br/>
+
+#### 安裝方式
+\
+clone repo
 ```
 # git clone https://github.com/eddy7697/simple-blog.git
 ```
-
-> vendor and moudule
+\
+vendor and moudule
 ```
 # composer install
-# npm install
 ```
+\
+建立 env
 
-> 建立 env
->
-> **＊請注意，在確認專案底下存在.env檔案後，務必確認是否連上資料庫**
->
-> **若沒有資料庫存在，請自行建立，並對應設定黨**
->
-> [phpMyAdmin 新增資料庫](https://www.siteground.com/tutorials/phpmyadmin/create-populate-tables/)
->
-> [MySQL Workbench. 新增資料庫](https://stackoverflow.com/questions/5515745/create-a-new-database-with-mysql-workbench)
+**＊請注意，在確認專案底下存在.env檔案後，務必確認是否連上資料庫**
+
+**若沒有資料庫存在，請自行建立，並對應設定檔**
+
+[phpMyAdmin 新增資料庫](https://www.siteground.com/tutorials/phpmyadmin/create-populate-tables/)
+
+[MySQL Workbench. 新增資料庫](https://stackoverflow.com/questions/5515745/create-a-new-database-with-mysql-workbench)
 ```
 # cp .env.example .env
 ```
-
-> generate key
+\
+generate key
 ```
 # php artisan key:generate
 ```
-
-> Start and do your homework
+\
+Database migration
+```
+# php artisan migrate
+```
+\
+Start and do your homework
 ```
 # php artisan serve
-# npm run watch
 ```
+<br/>
 
 ---
+## 文章
+<br/>
 #### 取得所有文章
 
 <table>
