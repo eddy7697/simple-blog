@@ -15,9 +15,9 @@
      - [POST `/api/category/add`](#新增類別)
  - Update
    - 文章
-   - [PUT `/api/post/update/{postUuid}`](#修改文章)
+     - [PUT `/api/post/update/{postUuid}`](#修改文章)
    - 類別
-   - [PUT `/api/category/update/{categoryUuid}`](#修改類別)
+     - [PUT `/api/category/update/{categoryUuid}`](#修改類別)
  - Delete
    - 文章
      - [DELETE `/api/post/delete`](#刪除文章)
