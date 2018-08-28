@@ -22,7 +22,7 @@
    - 文章
      - [DELETE `/api/post/delete`](#刪除文章)
    - 類別
-     - [DELETE `/api/category/delete`](#修改類別)
+     - [DELETE `/api/category/delete`](#刪除類別)
 
 <br/>
 
