@@ -9,18 +9,21 @@
 
 #### 安裝方式
 
-`git clone https://github.com/eddy7697/simple-blog.git`
+`# git clone https://github.com/eddy7697/simple-blog.git`
 > clone repo
 
-`composer install`
 
-`npm install`
+```
+# composer install
+
+# npm install
+```
 > 安裝相依套件
 
-`cp .env.example .env`
+`# cp .env.example .env`
 > new env
 
-`php artisan key:generate`
+`# php artisan key:generate`
 > generate key
 ---
 #### 取得所有文章
